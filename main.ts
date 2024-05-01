@@ -94,8 +94,10 @@ input.onGesture(Gesture.LogoDown, function () {
         . . . . #
         # # # # #
         `).showImage(0)
-    katakana.showString("ヒ ルシ")
     music.play(music.builtinPlayableSoundEffect(soundExpression.mysterious), music.PlaybackMode.InBackground)
+})
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
+    katakana.showString("ヒ ルシ")
 })
 let sad = 0
 sad = 0
