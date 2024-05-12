@@ -11,7 +11,7 @@ input.onGesture(Gesture.LogoUp, function () {
         # . . # .
         . # # . .
         `).showImage(0)
-    music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.InBackground)
+    music.play(music.builtinPlayableSoundEffect(soundExpression.twinkle), music.PlaybackMode.InBackground)
 })
 input.onGesture(Gesture.ScreenUp, function () {
     if (sad) {
@@ -43,7 +43,7 @@ input.onGesture(Gesture.ScreenDown, function () {
 input.onGesture(Gesture.Shake, function () {
     music.stopAllSounds()
     sad = 0
-    music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground)
+    music.play(music.builtinPlayableSoundEffect(soundExpression.soaring), music.PlaybackMode.InBackground)
     images.createImage(`
         . # . . .
         . . . . .
@@ -96,8 +96,18 @@ input.onGesture(Gesture.LogoDown, function () {
         `).showImage(0)
     music.play(music.builtinPlayableSoundEffect(soundExpression.mysterious), music.PlaybackMode.InBackground)
 })
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    katakana.showString("ヒ ルシ")
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
+    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.InBackground)
+    basic.showString("Happy Mother's Day!")
+    katakana.setScrollTime(200)
+    katakana.showString("ﾋ ﾙｼ")
+    images.createImage(`
+        . . . . .
+        # . # . .
+        . . . . #
+        # . . # .
+        . # # . .
+        `).showImage(0)
 })
 let sad = 0
 sad = 0
